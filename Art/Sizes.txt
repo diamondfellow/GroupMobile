@@ -1,0 +1,4 @@
+Meteors are 1000x1000
+UI is 64x64
+the space background is 1000x1000
+planets are 1000x1000
