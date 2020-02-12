@@ -4,3 +4,4 @@ the space background is 1000x1000
 planets are 1000x1000
 the star is 128x128
 enemy ship is 1000x1000
+the lasers are 128x128
