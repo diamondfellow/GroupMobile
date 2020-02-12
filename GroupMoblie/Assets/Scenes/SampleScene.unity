@@ -238,6 +238,8 @@ MonoBehaviour:
   purplpe: {fileID: 4359154043703573841, guid: 5b041b69529647749995e5e0c0848255, type: 3}
   red: {fileID: 4463334376900375710, guid: b24e0c82ca015ac42967370d447c5906, type: 3}
   blue: {fileID: 1528897425}
+  maxScale: 8
+  minScale: 3
   maxSpawnDistA: 5
   maxPlanetsA: 4
 --- !u!212 &1528897424
