@@ -24,7 +24,8 @@ public class Gravity : MonoBehaviour
             Vector2 moveDirection = new Vector2(transform.position.x - player.transform.position.x,
                 transform.position.y - player.transform.position.y);
             moveDirection.Normalize();
-            player.GetComponent<Rigidbody2D>().AddForce(new Vector2(moveDirection.x * gravityStrength, moveDirection.y * gravityStrength));
+            player.GetComponent<Rigidbody2D>().AddForce(moveDirection * gravityStrength *
+                GetComponent<Transform>().localScale);
 
         }
     }

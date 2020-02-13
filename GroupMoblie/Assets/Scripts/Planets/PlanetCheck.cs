@@ -23,7 +23,23 @@ public class PlanetCheck : MonoBehaviour
         {
             Debug.Log("do the thoign");
             Destroy(gameObject);
-            Randomish.counterA -= 1;
+            int random = Random.Range(1, 5);
+            switch (random)
+            {
+                case 1:
+                    GetComponent<Randomish>().SpawnPlanet(0f, 100f, 0f, 100f);
+                    break;
+                case 2:
+                    GetComponent<Randomish>().SpawnPlanet(-100f, 0f, 0f, 100f);
+                    break;
+                case 3:
+                    GetComponent<Randomish>().SpawnPlanet(-100f, 0f, -100f, 0f);
+                    break;
+                case 4:
+                    GetComponent<Randomish>().SpawnPlanet(0f, 100f, -100f, 0f);
+                    break;
+            }
+            
         }
     }
 }

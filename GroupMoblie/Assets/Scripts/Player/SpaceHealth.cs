@@ -67,13 +67,12 @@ public class SpaceHealth : MonoBehaviour
         if(SpaceMove.UIfuel >= 1)
         {
             FUtimer = 0;
-        }
-        
+        }       
         if( hp <= 0 || oxygen <= 0 || food <= 0 || FUtimer > 5)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if(hurtTimer > .3)
+        if(hurtTimer > .3 && hurtTimer < .6)
         {
             Color color = GetComponent<SpriteRenderer>().color;
             color.g = 255;
