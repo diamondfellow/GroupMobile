@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 0c7c8d0811ad7ea41a3b35ec71aec89e
+guid: 6dacea4aee2244244863350c9fa1580b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1888887545850435394
-    second: Food and Water Planet_0
+      213: -4796090636481902638
+    second: Fuel, Home, and Metal Planets_0
   - first:
-      213: 8400681931229043359
-    second: Food and Water Planet_1
+      213: -7224945859075422720
+    second: Fuel, Home, and Metal Planets_1
+  - first:
+      213: -8034950961192266317
+    second: Fuel, Home, and Metal Planets_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -128,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Food and Water Planet_0
+      name: Fuel, Home, and Metal Planets_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +145,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb8ece8e8c259c5e0800000000000000
-      internalID: -1888887545850435394
+      spriteID: 2d74be51afcd07db0800000000000000
+      internalID: -4796090636481902638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Food and Water Planet_1
+      name: Fuel, Home, and Metal Planets_1
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1000
+        width: 1000
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00641644506dbbb90800000000000000
+      internalID: -7224945859075422720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fuel, Home, and Metal Planets_2
       rect:
         serializedVersion: 2
         x: 0
@@ -163,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9a13fd25b7359470800000000000000
-      internalID: 8400681931229043359
+      spriteID: 3b5937afbae1e7090800000000000000
+      internalID: -8034950961192266317
       vertices: []
       indices: 
       edges: []

@@ -19,7 +19,8 @@ public class PlanetCheck : MonoBehaviour
     public void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("foo");
-        if (collision.gameObject.tag == "green" || collision.gameObject.tag == "purple" || collision.gameObject.tag == "red")
+        if (collision.gameObject.tag == "fuel" || collision.gameObject.tag == "oxygen" 
+            || collision.gameObject.tag == "metal" || collision.gameObject.tag == "food")
         {
             Debug.Log("do the thoign");
             Destroy(gameObject);
@@ -40,6 +41,7 @@ public class PlanetCheck : MonoBehaviour
                     break;
             }
             
+
         }
     }
 }
