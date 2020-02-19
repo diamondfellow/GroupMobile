@@ -22,7 +22,7 @@ public class Randomish : MonoBehaviour
     float maxPlanetsB = 0;
     float maxPlanetsC = 0;
     float maxPlanetsD = 0;
-    public int maxPlanetforQuad = 40;
+    public int maxPlanetforQuad = 1;
     public static int counter= 0;
     int check;
 

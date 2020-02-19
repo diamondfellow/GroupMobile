@@ -17,6 +17,11 @@ public class Gravity : MonoBehaviour
     {
         
     }
+    public int GravityCheck(){
+        float GravityScan =  (transform.localScale.x * 2) + gravityStrength;
+        int GravityReturn = Mathf.RoundToInt(GravityScan);
+        return GravityReturn;
+    }
     public void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
