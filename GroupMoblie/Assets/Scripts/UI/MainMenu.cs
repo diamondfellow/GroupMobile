@@ -42,6 +42,14 @@ public class MainMenu : MonoBehaviour
     }
     public void MainMenuo()
     {
-        SceneManager.LoadScene("0");
+        SceneManager.LoadScene(0);
+    }
+    public void Hints()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void Controls()
+    {
+        SceneManager.LoadScene(5);
     }
 }
