@@ -49,7 +49,7 @@ public class SpaceHealth : MonoBehaviour
         }
         if (Ftimer > 5)
         {
-            food -= 2;
+            food -= 1;
             Ftimer = 0;
         }
         if(Mtimer > 2 && hp < maxHp && metal > 0)

@@ -23,6 +23,7 @@ public class SpaceMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UIfuel = fuel;
         if (!MainMenu.paused){
             float rotation = joystick.Horizontal;
             float rotationChange = rotation * rotationSpeed;
