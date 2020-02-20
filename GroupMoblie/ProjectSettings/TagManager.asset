@@ -7,6 +7,10 @@ TagManager:
   - green
   - purple
   - red
+  - food
+  - fuel
+  - oxygen
+  - metal
   layers:
   - Default
   - TransparentFX

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlanetCheck : MonoBehaviour
 {
+    GameObject player;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -15,11 +16,19 @@ public class PlanetCheck : MonoBehaviour
     {
         
     }
+    public int Distance()
+    {
+        float distance = Vector3.Distance(player.transform.position,
+            transform.position);
+        int Rdistance = Mathf.RoundToInt(distance);
+        return Rdistance;
 
+    }
     public void OnTriggerStay2D(Collider2D collision)
     {
         Debug.Log("foo");
-        if (collision.gameObject.tag == "green" || collision.gameObject.tag == "purple" || collision.gameObject.tag == "red")
+        if (collision.gameObject.tag == "fuel" || collision.gameObject.tag == "oxygen" 
+            || collision.gameObject.tag == "metal" || collision.gameObject.tag == "food")
         {
             Debug.Log("do the thoign");
             Destroy(gameObject);
@@ -40,6 +49,7 @@ public class PlanetCheck : MonoBehaviour
                     break;
             }
             
+
         }
     }
 }
