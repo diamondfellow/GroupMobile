@@ -350,12 +350,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.05
+  m_GravityScale: 0.01
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 1
+  m_Constraints: 0
 --- !u!212 &539428998
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -501,7 +501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &601775741
 GameObject:
@@ -956,7 +956,7 @@ RectTransform:
   - {fileID: 601775742}
   - {fileID: 1264298269}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1361,7 +1361,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Try to land as gentally as possible to avoid damage
+  m_Text: Try to land gentally with the back of your ship to avoid damage
 --- !u!222 &1264298271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1470,7 +1470,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1600437465
 GameObject:
@@ -1550,7 +1550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600437465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 7.76, z: 0}
+  m_LocalPosition: {x: 0.32, y: 7.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1590,9 +1590,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.022992969, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.4198147
 --- !u!1 &1666664688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,7 +1672,7 @@ Transform:
   m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011825109
 GameObject:
@@ -1774,7 +1774,7 @@ Transform:
   m_LocalScale: {x: 3.0180001, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2051174076
 PrefabInstance:
@@ -1786,7 +1786,7 @@ PrefabInstance:
     - target: {fileID: 3706572162757144982, guid: 8c55ea8f2f347ed4992d59fe61618e4e,
         type: 3}
       propertyPath: gravityStrength
-      value: 80
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4963715813286508213, guid: 8c55ea8f2f347ed4992d59fe61618e4e,
         type: 3}
@@ -1808,6 +1808,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4963715813286508214, guid: 8c55ea8f2f347ed4992d59fe61618e4e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7224945859075422720, guid: 6dacea4aee2244244863350c9fa1580b,
+        type: 3}
     - target: {fileID: 4963715813286508215, guid: 8c55ea8f2f347ed4992d59fe61618e4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1975,5 +1981,5 @@ Transform:
   m_LocalScale: {x: 3.0180001, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
