@@ -48,6 +48,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+    public void Hints2()
+    {
+        SceneManager.LoadScene(6);
+    }
     public void Controls()
     {
         SceneManager.LoadScene(5);
