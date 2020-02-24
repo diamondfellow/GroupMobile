@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class SpaceMove : MonoBehaviour
 {
     public float Speed;
+    public float fuelLoss;
     public float rotationSpeed;
     public static int UIfuel;
     public static float fuel;
@@ -23,7 +24,7 @@ public class SpaceMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fuel -= move;
+        fuel -= move*(slider.value * fuelLoss);
         UIfuel = Mathf.RoundToInt(fuel);
         if (!MainMenu.paused){
             float rotation = joystick.Horizontal;
@@ -42,10 +43,18 @@ public class SpaceMove : MonoBehaviour
     public void Thrust()
     {
         move = 1f;
+        GetComponent<ParticleSystem>().maxParticles = 500;
+        ParticleSystem foo = GetComponent<ParticleSystem>();
+        var shape = foo.shape;
+        shape.angle = 4;
     }
     public void Stop()
     {
         move = 0f;
+        GetComponent<ParticleSystem>().maxParticles = 2;
+        ParticleSystem foo = GetComponent<ParticleSystem>();
+        var shape = foo.shape;
+        shape.angle = 1;
     }
 
 }

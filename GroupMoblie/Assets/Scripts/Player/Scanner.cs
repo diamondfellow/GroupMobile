@@ -25,6 +25,10 @@ public class Scanner : MonoBehaviour
         Collider2D[] scannedObjects = Physics2D.OverlapCircleAll(transform.position, scanRadius, scanLayers);
         foreach(Collider2D scanObject in scannedObjects)
         {
+            if(scannedObjects == null)
+            {
+                ScanText.text = (ScanText.text + "No Planets within Range");
+            }
             switch (scanObject.name)
             {
                 case "Food(Clone)":
