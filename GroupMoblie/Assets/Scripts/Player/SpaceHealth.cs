@@ -12,6 +12,7 @@ public class SpaceHealth : MonoBehaviour
     public static int oxygen;
     public static int food;
     public static int metal;
+    public static bool alive;
     float velocityY;
     float velocityX;
 
@@ -25,6 +26,7 @@ public class SpaceHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        alive = true;
         oxygen = 200;
         food = 50;
         metal = 0;
@@ -95,5 +97,21 @@ public class SpaceHealth : MonoBehaviour
             hp -= tDamage;
         }
        
+    }
+    public void FuelDeath()
+    {
+        
+    }
+    public void OxygenDeath()
+    {
+
+    }
+    public void NoHealth()
+    {
+
+    }
+    public void FoodDeath()
+    {
+
     }
 }

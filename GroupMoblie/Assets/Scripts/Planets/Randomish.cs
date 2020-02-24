@@ -29,6 +29,11 @@ public class Randomish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        counter = 0;
+        maxPlanetsA = 0;
+        maxPlanetsB = 0;
+        maxPlanetsC = 0;
+        maxPlanetsD = 0;
         check = (maxPlanetforQuad * 4);
         while (counter < check)
         {
