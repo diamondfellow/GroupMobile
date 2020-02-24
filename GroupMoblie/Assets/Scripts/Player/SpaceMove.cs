@@ -12,7 +12,12 @@ public class SpaceMove : MonoBehaviour
     public Slider slider;
     public Joystick joystick;
     public GameObject movePoint;
+    public GameObject Go;
+    public Sprite goUp;
+    public Sprite goDown;
     float move = 0;
+
+    
     //public Text txt;
     // Start is called before the first frame update
     void Start()
@@ -26,12 +31,12 @@ public class SpaceMove : MonoBehaviour
     {
         fuel -= move*(slider.value * fuelLoss);
         UIfuel = Mathf.RoundToInt(fuel);
-        if (!MainMenu.paused){
+        if (!MainMenu.paused && SpaceHealth.alive){
             float rotation = joystick.Horizontal;
             float rotationChange = rotation * rotationSpeed;
             Vector3 transfer = GetComponent<Transform>().rotation.eulerAngles;
             transfer.z -= rotationChange;
-            Debug.Log(transfer);
+            
             transform.eulerAngles = transfer;
 
             float thrustPower = slider.value;
@@ -42,6 +47,7 @@ public class SpaceMove : MonoBehaviour
     }
     public void Thrust()
     {
+        Go.GetComponent<Image>().sprite = goDown;
         move = 1f;
         GetComponent<ParticleSystem>().maxParticles = 500;
         ParticleSystem foo = GetComponent<ParticleSystem>();
@@ -50,6 +56,7 @@ public class SpaceMove : MonoBehaviour
     }
     public void Stop()
     {
+        Go.GetComponent<Image>().sprite = goUp;
         move = 0f;
         GetComponent<ParticleSystem>().maxParticles = 2;
         ParticleSystem foo = GetComponent<ParticleSystem>();

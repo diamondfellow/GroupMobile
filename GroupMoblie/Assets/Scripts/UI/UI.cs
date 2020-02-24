@@ -20,7 +20,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hp.text = ("HEALTH: " + SpaceHealth.hp);
+        //hp.text = ("HEALTH: " + SpaceHealth.hp);
         metal.text = ("METAL: " + SpaceHealth.metal);
         fuel.text = ("FUEL: " + SpaceMove.UIfuel);
         food.text = ("FOOD: " + SpaceHealth.food);

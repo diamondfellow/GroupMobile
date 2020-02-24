@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class SpaceHealth : MonoBehaviour
 {
     public float damageModifier;
@@ -22,7 +22,12 @@ public class SpaceHealth : MonoBehaviour
     float FUtimer;
     float VELOtimer;
     float hurtTimer;
-    
+    float deathtimer;
+
+    public Canvas Interface;
+    public Canvas Death;
+    public Text deathText;
+    public Image Fade;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,13 +71,54 @@ public class SpaceHealth : MonoBehaviour
         FUtimer += Time.deltaTime;
         VELOtimer += Time.deltaTime;
         hurtTimer += Time.deltaTime;
+        deathtimer += Time.deltaTime;
         if(SpaceMove.UIfuel >= 1)
         {
             FUtimer = 0;
+            
         }       
-        if( hp <= 0 || oxygen <= 0 || food <= 0 || FUtimer > 5)
+        if( hp <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (alive)
+            {
+                deathtimer = 0;
+            }
+            alive = false;
+            Interface.enabled = false;
+            Death.enabled = true;
+            deathText.text = "Your hull intergity is 0, your fuel tanks rupture casuing a massive fireball";
+        }
+        else if (oxygen <= 0)
+        {
+            if (alive)
+            {
+                deathtimer = 0;
+            }
+            alive = false;
+            Interface.enabled = false;
+            Death.enabled = true;
+            deathText.text = "With no oxygen everything fades to balck as you lose conciocness";
+        }
+        else if(food <= 0)
+        {
+            if (alive)
+            {
+                deathtimer = 0;
+            }
+            alive = false;
+            Interface.enabled = false;            
+            deathText.text = "With no food you lose cognitive thought and stare at the darkness unitl it stares back";
+        }
+        else if (FUtimer > 5)
+        {
+            if (alive)
+            {
+                deathtimer = 0;
+            }           
+            alive = false;
+            Interface.enabled = false;
+            Death.enabled = true;
+            deathText.text = "With no fuel you drift endlessly into the nowhere";
         }
         if(hurtTimer > .3 && hurtTimer < .6)
         {
@@ -80,6 +126,11 @@ public class SpaceHealth : MonoBehaviour
             color.g = 255;
             color.b = 255;
             GetComponent<SpriteRenderer>().color = color;
+        }
+        if (deathtimer > 5 && !alive) 
+        {
+            //Debug.Log("Work please");
+            Fade.GetComponent<Animator>().SetTrigger("fade");
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -98,19 +149,8 @@ public class SpaceHealth : MonoBehaviour
         }
        
     }
-    public void FuelDeath()
-    {
-        
-    }
-    public void OxygenDeath()
-    {
-
-    }
-    public void NoHealth()
-    {
-
-    }
-    public void FoodDeath()
+    
+    public void Explosion()
     {
 
     }

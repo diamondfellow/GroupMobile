@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hints2.unity
     guid: b639b0bb6c26c2741b8aca7214005e09
+  - enabled: 1
+    path: Assets/Scenes/Retry.unity
+    guid: 073299fead6311046a619691510f94c2
   m_configObjects: {}

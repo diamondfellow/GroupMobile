@@ -56,7 +56,7 @@ public class Scanner : MonoBehaviour
     }
     public void OnDrawGizmosSelected()
     {
-        Debug.Log("?");
+        
         Gizmos.DrawWireSphere(transform.position, scanRadius);
     }
 

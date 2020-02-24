@@ -26,11 +26,11 @@ public class PlanetCheck : MonoBehaviour
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("foo");
+        //Debug.Log("foo");
         if (collision.gameObject.tag == "fuel" || collision.gameObject.tag == "oxygen" 
             || collision.gameObject.tag == "metal" || collision.gameObject.tag == "food")
         {
-            Debug.Log("do the thoign");
+            //Debug.Log("do the thoign");
             Destroy(gameObject);
             int random = Random.Range(1, 5);
             switch (random)
