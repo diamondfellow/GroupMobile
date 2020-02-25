@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ScreenWrap : MonoBehaviour
 {
-    private void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("??");
         if(collision.gameObject.tag == "Player")
         {
             Debug.Log("bruh");
