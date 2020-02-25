@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is where you get oxygen you can't live without it!
+  m_Text: This is where you get oxygen, you can't live without it!
 --- !u!222 &76081016
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: some planets are useless
+  m_Text: some planets are useless...
 --- !u!222 &172253613
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -901,7 +901,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your home is dying and you must bring it back metal to keep it alive.
+  m_Text: You must bring it back metal so they can build ships and evacuate!
 --- !u!222 &769547218
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1230,8 +1230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is where you get metal for your home, also metal is used to repair
-    you.
+  m_Text: This is where you get metal for your home, also metal is used for repairs
 --- !u!222 &1000358777
 CanvasRenderer:
   m_ObjectHideFlags: 0

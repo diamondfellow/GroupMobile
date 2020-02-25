@@ -11,6 +11,7 @@ TagManager:
   - fuel
   - oxygen
   - metal
+  - RESET
   layers:
   - Default
   - TransparentFX
