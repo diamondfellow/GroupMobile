@@ -11,6 +11,7 @@ TagManager:
   - fuel
   - oxygen
   - metal
+  - boom
   layers:
   - Default
   - TransparentFX

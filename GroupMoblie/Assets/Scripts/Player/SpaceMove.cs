@@ -22,14 +22,21 @@ public class SpaceMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fuel = 1000;
+        fuel = 600;
         move = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        fuel -= move*(slider.value * fuelLoss);
+        if(fuel > 1)
+        {
+            fuel -= move * (slider.value * fuelLoss);
+            float thrustPower = slider.value;
+            Vector2 moveDirection = new Vector2(movePoint.transform.position.x - transform.position.x, movePoint.transform.position.y - transform.position.y);
+            moveDirection.Normalize();
+            GetComponent<Rigidbody2D>().AddForce(moveDirection * move * thrustPower * Speed);
+        }        
         UIfuel = Mathf.RoundToInt(fuel);
         if (!MainMenu.paused && SpaceHealth.alive){
             float rotation = joystick.Horizontal;
@@ -39,10 +46,7 @@ public class SpaceMove : MonoBehaviour
             
             transform.eulerAngles = transfer;
 
-            float thrustPower = slider.value;
-            Vector2 moveDirection = new Vector2(movePoint.transform.position.x - transform.position.x, movePoint.transform.position.y - transform.position.y);
-            moveDirection.Normalize();
-            GetComponent<Rigidbody2D>().AddForce(moveDirection * move * thrustPower * Speed);
+
         }
     }
     public void Thrust()

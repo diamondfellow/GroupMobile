@@ -28,9 +28,13 @@ public class SpaceHealth : MonoBehaviour
     public Canvas Death;
     public Text deathText;
     public Image Fade;
+    bool Bruh;
+    bool Bruh2;
     // Start is called before the first frame update
     void Start()
     {
+        Bruh = true;
+        Bruh2 = true;
         alive = true;
         oxygen = 200;
         food = 50;
@@ -78,15 +82,12 @@ public class SpaceHealth : MonoBehaviour
             
         }       
         if( hp <= 0)
-        {
-            if (alive)
-            {
-                deathtimer = 0;
-            }
-            alive = false;
+        {         
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            Explosion();
             Interface.enabled = false;
             Death.enabled = true;
-            deathText.text = "Your hull intergity is 0, your fuel tanks rupture casuing a massive fireball";
+            deathText.text = "Your hull integrity is 0, your fuel tanks rupture, causing a massive fireball!";
         }
         else if (oxygen <= 0)
         {
@@ -97,7 +98,7 @@ public class SpaceHealth : MonoBehaviour
             alive = false;
             Interface.enabled = false;
             Death.enabled = true;
-            deathText.text = "With no oxygen everything fades to balck as you lose conciocness";
+            deathText.text = "With no oxygen, everything fades to black, as you lose consciousness...";
         }
         else if(food <= 0)
         {
@@ -107,7 +108,7 @@ public class SpaceHealth : MonoBehaviour
             }
             alive = false;
             Interface.enabled = false;            
-            deathText.text = "With no food you lose cognitive thought and stare at the darkness unitl it stares back";
+            deathText.text = "With no food, you lose cognitive thought and stare at the darkness unitl it stares back...";
         }
         else if (FUtimer > 5)
         {
@@ -118,7 +119,7 @@ public class SpaceHealth : MonoBehaviour
             alive = false;
             Interface.enabled = false;
             Death.enabled = true;
-            deathText.text = "With no fuel you drift endlessly into the nowhere";
+            deathText.text = "With no fuel, you drift endlessly into nowhere...";
         }
         if(hurtTimer > .3 && hurtTimer < .6)
         {
@@ -127,10 +128,9 @@ public class SpaceHealth : MonoBehaviour
             color.b = 255;
             GetComponent<SpriteRenderer>().color = color;
         }
-        if (deathtimer > 5 && !alive) 
-        {
-            //Debug.Log("Work please");
-            Fade.GetComponent<Animator>().SetTrigger("fade");
+        if (deathtimer > 3 && !alive) 
+        {            
+            FadeOut();
         }
     }
     void OnCollisionEnter2D(Collision2D collision)
@@ -149,9 +149,31 @@ public class SpaceHealth : MonoBehaviour
         }
        
     }
-    
+    public void FadeOut()
+    {
+       
+        if (Bruh)
+        {
+            Fade.GetComponent<Animator>().SetTrigger("fade");
+            Bruh = false;
+        }
+            
+    }
     public void Explosion()
     {
+        if (Bruh2)
+        {
+            if (alive)
+            {
+                deathtimer = 0;
+            }
+            alive = false;
+            GetComponent<SpriteRenderer>().enabled = false;
+            GameObject explode = GameObject.FindGameObjectWithTag("boom");
+            explode.GetComponent<ParticleSystem>().Play();
+            
+            Bruh2 = false;
+        }
 
     }
 }
