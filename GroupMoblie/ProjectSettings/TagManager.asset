@@ -12,6 +12,7 @@ TagManager:
   - oxygen
   - metal
   - boom
+  - RESET
   layers:
   - Default
   - TransparentFX
