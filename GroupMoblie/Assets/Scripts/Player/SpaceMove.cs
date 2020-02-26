@@ -17,18 +17,25 @@ public class SpaceMove : MonoBehaviour
     public Sprite goDown;
     float move = 0;
 
-    
+    bool playEngine;
+    public AudioClip engine;
+    public AudioSource Sound;
     //public Text txt;
     // Start is called before the first frame update
     void Start()
     {
         fuel = 600;
         move = 0f;
+        playEngine = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(playEngine && !Sound.isPlaying)
+        {
+            Sound.PlayOneShot(engine);
+        }
         if(fuel > 1)
         {
             fuel -= move * (slider.value * fuelLoss);
@@ -51,6 +58,7 @@ public class SpaceMove : MonoBehaviour
     }
     public void Thrust()
     {
+        playEngine = true;
         Go.GetComponent<Image>().sprite = goDown;
         move = 1f;
         GetComponent<ParticleSystem>().maxParticles = 500;
@@ -60,6 +68,8 @@ public class SpaceMove : MonoBehaviour
     }
     public void Stop()
     {
+        Sound.Stop();
+        playEngine = false;
         Go.GetComponent<Image>().sprite = goUp;
         move = 0f;
         GetComponent<ParticleSystem>().maxParticles = 2;

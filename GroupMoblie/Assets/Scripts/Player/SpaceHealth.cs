@@ -30,6 +30,10 @@ public class SpaceHealth : MonoBehaviour
     public Image Fade;
     bool Bruh;
     bool Bruh2;
+
+    public AudioClip hurt;
+    public AudioClip explosion;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +41,7 @@ public class SpaceHealth : MonoBehaviour
         Bruh2 = true;
         alive = true;
         oxygen = 200;
-        food = 50;
+        food = 25;
         metal = 0;
         hp = maxHp;
     }
@@ -53,12 +57,12 @@ public class SpaceHealth : MonoBehaviour
             velocityY = velocity.y;
             VELOtimer = 0;
         }
-        if(Otimer > 1)
+        if(Otimer > 1 && !OxygenP.OnOxygen)
         {
             oxygen -= 1;
             Otimer = 0;
         }
-        if (Ftimer > 5)
+        if (Ftimer > 5 && !FoodP.OnFood)
         {
             food -= 1;
             Ftimer = 0;
@@ -143,6 +147,7 @@ public class SpaceHealth : MonoBehaviour
             color.g = 0;
             color.b = 0;
             GetComponent<SpriteRenderer>().color = color;
+            GetComponent<AudioSource>().PlayOneShot(hurt);
             float damage = damageModifier * (velocityX + velocityY);
             int tDamage = (int) damage;
             hp -= tDamage;

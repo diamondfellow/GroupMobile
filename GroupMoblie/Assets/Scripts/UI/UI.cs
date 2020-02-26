@@ -11,6 +11,7 @@ public class UI : MonoBehaviour
     public Text food;
     public Text oxygen;
     public Text homePlanet;
+    public Slider hpS;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +21,12 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //hp.text = ("HEALTH: " + SpaceHealth.hp);
+        hpS.value = SpaceHealth.hp;
+        hp.text = (": " + SpaceHealth.hp);
         metal.text = ("METAL: " + SpaceHealth.metal);
         fuel.text = ("FUEL: " + SpaceMove.UIfuel);
         food.text = ("FOOD: " + SpaceHealth.food);
         oxygen.text = ("OXYGEN: " + SpaceHealth.oxygen);
-        //homePlanet.text = ("Home Planet Metal: " + HomeP.homeMetal);
+        homePlanet.text = (("HOME PLANET'S METAL: ")+ HomeP.homeMetal + "|1000");
     }
 }

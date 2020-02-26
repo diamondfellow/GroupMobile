@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 977845466759854431}
   - component: {fileID: 5105726333898839703}
   - component: {fileID: -984363565876756259}
+  - component: {fileID: 7835852647865020692}
   m_Layer: 0
   m_Name: Metal
   m_TagString: metal
@@ -163,5 +164,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbff919a4c34a774095dabb2003835ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7835852647865020692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3447139744874293343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ebd8fdec2e0b4e45830ef60bb4e16ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

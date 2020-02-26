@@ -33,6 +33,7 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 0;
         GetComponent<Canvas>().enabled = true;
         paused = true; 
+
     }
     public void StartGame()
     {
