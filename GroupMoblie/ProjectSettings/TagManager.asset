@@ -13,6 +13,7 @@ TagManager:
   - metal
   - boom
   - RESET
+  - music
   layers:
   - Default
   - TransparentFX

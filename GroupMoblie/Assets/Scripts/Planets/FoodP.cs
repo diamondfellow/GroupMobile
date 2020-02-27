@@ -8,7 +8,7 @@ public class FoodP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnFood = false;
     }
 
     // Update is called once per frame

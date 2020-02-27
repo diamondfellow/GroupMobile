@@ -8,7 +8,7 @@ public class OxygenP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnOxygen = false;
     }
 
     // Update is called once per frame

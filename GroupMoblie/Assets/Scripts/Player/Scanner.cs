@@ -8,6 +8,8 @@ public class Scanner : MonoBehaviour
     public float scanRadius;
     public LayerMask scanLayers;
     public Text ScanText;
+    public AudioClip ScanSound;
+    public AudioSource Sound;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class Scanner : MonoBehaviour
     }
     public void Scan()
     {
+        Sound.PlayOneShot(ScanSound);
         ScanText.text = "Scanned:";
         Collider2D[] scannedObjects = Physics2D.OverlapCircleAll(transform.position, scanRadius, scanLayers);
         foreach(Collider2D scanObject in scannedObjects)

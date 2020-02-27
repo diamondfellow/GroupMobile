@@ -8,7 +8,7 @@ public class FuelP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        OnFuel = false;   
     }
 
     // Update is called once per frame
