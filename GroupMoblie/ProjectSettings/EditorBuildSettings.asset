@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Retry.unity
     guid: 073299fead6311046a619691510f94c2
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: f8b280d57ba5f074a80ad745ead97f86
   m_configObjects: {}

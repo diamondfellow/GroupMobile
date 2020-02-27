@@ -960,7 +960,7 @@ GameObject:
   - component: {fileID: 634659887}
   m_Layer: 0
   m_Name: New Sprite (8)
-  m_TagString: RESET
+  m_TagString: Credits
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2805,6 +2805,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1075946893}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1905848882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905848880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee295091ea8a6b4c9eaf691fa628cb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1905848890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2823,18 +2835,6 @@ MonoBehaviour:
   slider: {fileID: 1158679789}
   joystick: {fileID: 16310771}
   movePoint: {fileID: 1409280123}
---- !u!114 &1905848891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905848880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a582e35b27f3ef84fb2ae263a9f0abcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1924296168
 GameObject:
   m_ObjectHideFlags: 0
