@@ -14,6 +14,8 @@ public class CustomPlay : MonoBehaviour
     public Slider GravityStrength;
     public Slider ThrustPower;
     public Slider RotationSpeed;
+    public Slider HomePlanetMetalRequirent;
+    public Slider MaxHealth;
     // Start is called before the first frame update
     void Start()
     {
