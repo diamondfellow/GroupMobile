@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class HomeP : MonoBehaviour
 {
     public static int homeMetal;
-    
+    public static bool Endtime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Endtime = false;
     }
 
     // Update is called once per frame
@@ -19,6 +19,7 @@ public class HomeP : MonoBehaviour
         if(homeMetal > 999)
         {
             SceneManager.LoadScene("Win");
+            Endtime = true;
         }
     }
     private void OnCollisionStay2D(Collision2D collision)

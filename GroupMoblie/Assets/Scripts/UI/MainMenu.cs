@@ -43,15 +43,43 @@ public class MainMenu : MonoBehaviour
     }
     public void MainMenuo()
     {
-        SceneManager.LoadScene(0);
+        GameObject music = GameObject.FindGameObjectWithTag("music");
+        if(music == null)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            DontDestroyOnLoad(music);
+            SceneManager.LoadScene(0);
+        }
+              
     }
     public void Hints()
     {
-        SceneManager.LoadScene(4);
+        GameObject music = GameObject.FindGameObjectWithTag("music");
+        if (music == null)
+        {
+            SceneManager.LoadScene(4);
+        }
+        else
+        {
+            DontDestroyOnLoad(music);
+            SceneManager.LoadScene(4);
+        }
     }
     public void Hints2()
     {
-        SceneManager.LoadScene(6);
+        GameObject music = GameObject.FindGameObjectWithTag("music");
+        if (music == null)
+        {
+            SceneManager.LoadScene(6);
+        }
+        else
+        {
+            DontDestroyOnLoad(music);
+            SceneManager.LoadScene(6);
+        }
     }
     public void Controls()
     {
