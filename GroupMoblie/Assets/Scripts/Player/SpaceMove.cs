@@ -24,7 +24,7 @@ public class SpaceMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fuel = 600;
+        fuel = PlayerPrefs.GetInt("MaxFuel");
         move = 0f;
         playEngine = false;
     }

@@ -29,6 +29,8 @@ public class Randomish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Timer.gameStart = true;
+        maxPlanetforQuad = PlayerPrefs.GetInt("MaxPlanets");
         counter = 0;
         maxPlanetsA = 0;
         maxPlanetsB = 0;

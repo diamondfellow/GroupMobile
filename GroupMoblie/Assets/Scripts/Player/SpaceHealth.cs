@@ -40,8 +40,8 @@ public class SpaceHealth : MonoBehaviour
         Bruh = true;
         Bruh2 = true;
         alive = true;
-        oxygen = 200;
-        food = 25;
+        oxygen = PlayerPrefs.GetInt("MaxOxygen");
+        food = PlayerPrefs.GetInt("MaxFood");
         metal = 0;
         hp = maxHp;
     }
