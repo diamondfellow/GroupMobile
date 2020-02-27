@@ -39,7 +39,8 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(1);
-
+        GameObject music = GameObject.FindGameObjectWithTag("music");
+        Destroy(music);
     }
     public void MainMenuo()
     {
