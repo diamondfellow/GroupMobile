@@ -35,7 +35,6 @@ public class MainMenu : MonoBehaviour
         Pause.enabled = true;
         Time.timeScale = 0;        
         paused = true; 
-
     }
     public void StartGame()
     {
