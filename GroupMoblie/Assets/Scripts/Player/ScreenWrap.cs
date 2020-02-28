@@ -13,6 +13,22 @@ public class ScreenWrap : MonoBehaviour
             Vector3 transfer = collision.gameObject.GetComponent<Transform>().position;
             transfer.x *= -1;
             transfer.y *= -1;
+            if(transfer.x > 0)
+            {
+                transfer.x -= 2;
+            }
+            if(transfer.y > 0)
+            {
+                transfer.y -= 2;
+            }
+            if(transfer.x < 0)
+            {
+                transfer.x += 2;
+            }
+            if(transfer.y < 0)
+            {
+                transfer.y += 2;
+            }
             collision.gameObject.GetComponent<Transform>().position = transfer;
         }
     }

@@ -40,7 +40,7 @@ public class SpaceMove : MonoBehaviour
         {
             Sound.PlayOneShot(engine);
         }
-        if(fuel >= 1)
+        if(fuel >= 0)
         {
             fuel -= move * (slider.value * fuelLoss);
             float thrustPower = slider.value;

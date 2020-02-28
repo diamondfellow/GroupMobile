@@ -34,7 +34,7 @@ public class CustomPlay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     // Update is called once per frame
     void Update()
@@ -92,7 +92,7 @@ public class CustomPlay : MonoBehaviour
         MaxFood.value = 30;
         MaxMetal.value = 300;
         GravityStrength.value = 1.50f;
-        ThrustPower.value = 2;
+        ThrustPower.value = 3;
         RotationSpeed.value = 3;
         HomePlanetMetalRequirent.value = 1000;
         MaxHealth.value = 100;
