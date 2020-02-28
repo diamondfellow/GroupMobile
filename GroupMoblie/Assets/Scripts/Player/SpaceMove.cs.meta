@@ -3,7 +3,15 @@ guid: 16f0a7c3e19b6f74789d834fce0d2273
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - slider: {instanceID: 0}
+  - joystick: {instanceID: 0}
+  - movePoint: {instanceID: 0}
+  - Go: {instanceID: 0}
+  - goUp: {instanceID: 0}
+  - goDown: {instanceID: 0}
+  - engine: {instanceID: 0}
+  - Sound: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

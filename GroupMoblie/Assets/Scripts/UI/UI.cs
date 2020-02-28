@@ -15,7 +15,7 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        HomeP.homeMetal = 0;
     }
 
     // Update is called once per frame
@@ -27,6 +27,6 @@ public class UI : MonoBehaviour
         fuel.text = ("FUEL: " + SpaceMove.UIfuel);
         food.text = ("FOOD: " + SpaceHealth.food);
         oxygen.text = ("OXYGEN: " + SpaceHealth.oxygen);
-        homePlanet.text = (("HOME PLANET'S METAL: ")+ HomeP.homeMetal + "|1000");
+        homePlanet.text = (("HOME PLANET'S METAL: ")+ HomeP.homeMetal + "|" + PlayerPrefs.GetInt("MetalRequirement"));
     }
 }

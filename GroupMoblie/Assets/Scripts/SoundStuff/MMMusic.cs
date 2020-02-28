@@ -5,10 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MMMusic : MonoBehaviour
 {
+    public AudioSource Music;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        
+        GameObject music = GameObject.FindGameObjectWithTag("music2");
+        if(music == null)
+        {
+            Music.Play();
+        }
+        else
+        {
+            return;
+        }
     }
 
     // Update is called once per frame

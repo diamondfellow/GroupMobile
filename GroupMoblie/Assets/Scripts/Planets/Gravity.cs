@@ -10,6 +10,7 @@ public class Gravity : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        gravityStrength = PlayerPrefs.GetFloat("GravityStrength");
     }
 
     // Update is called once per frame

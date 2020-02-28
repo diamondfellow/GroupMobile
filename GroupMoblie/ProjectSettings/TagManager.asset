@@ -15,6 +15,7 @@ TagManager:
   - RESET
   - music
   - Credits
+  - music2
   layers:
   - Default
   - TransparentFX

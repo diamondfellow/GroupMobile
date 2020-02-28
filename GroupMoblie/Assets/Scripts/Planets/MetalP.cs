@@ -18,7 +18,7 @@ public class MetalP : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && SpaceHealth.metal <= 299)
+        if (collision.gameObject.tag == "Player" && SpaceHealth.metal < PlayerPrefs.GetInt("MaxMetal"))
         {
             SpaceHealth.metal += 1;
         }

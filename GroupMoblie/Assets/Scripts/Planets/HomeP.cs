@@ -16,10 +16,11 @@ public class HomeP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(homeMetal > 999)
+        if(homeMetal > PlayerPrefs.GetInt("MetalRequirement"))
         {
             SceneManager.LoadScene("Win");
             Endtime = true;
+            PlayerPrefs.SetInt("CurrentTime", Mathf.RoundToInt(HSTimer.HStimer));
         }
     }
     private void OnCollisionStay2D(Collision2D collision)

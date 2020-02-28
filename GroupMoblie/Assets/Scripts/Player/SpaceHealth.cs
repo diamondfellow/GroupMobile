@@ -7,7 +7,7 @@ public class SpaceHealth : MonoBehaviour
 {
     public float damageModifier;
     public float maxSpeed;
-    public int maxHp;
+    //public int maxHp;
     public static int hp;
     public static int oxygen;
     public static int food;
@@ -43,7 +43,7 @@ public class SpaceHealth : MonoBehaviour
         oxygen = PlayerPrefs.GetInt("MaxOxygen");
         food = PlayerPrefs.GetInt("MaxFood");
         metal = 0;
-        hp = maxHp;
+        hp = PlayerPrefs.GetInt("MaxHealth");
     }
 
     // Update is called once per frame
@@ -67,7 +67,7 @@ public class SpaceHealth : MonoBehaviour
             food -= 1;
             Ftimer = 0;
         }
-        if(Mtimer > 2 && hp < maxHp && metal > 0)
+        if(Mtimer > 2 && hp < PlayerPrefs.GetInt("MaxHealth") && metal > 0)
         {
             metal -= 1;
             hp += 1;

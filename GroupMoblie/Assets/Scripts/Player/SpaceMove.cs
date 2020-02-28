@@ -24,7 +24,10 @@ public class SpaceMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fuel = PlayerPrefs.GetInt("MaxFuel");
+        Debug.Log(PlayerPrefs.GetInt("MaxFuel"));
+        rotationSpeed = PlayerPrefs.GetFloat("RotationSpeed");
+        Speed = PlayerPrefs.GetFloat("ThrustPower");
+        fuel = PlayerPrefs.GetFloat("MaxFuel");
         move = 0f;
         playEngine = false;
     }
@@ -32,7 +35,8 @@ public class SpaceMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playEngine && !Sound.isPlaying)
+        UIfuel = Mathf.RoundToInt(fuel);
+        if (playEngine && !Sound.isPlaying)
         {
             Sound.PlayOneShot(engine);
         }
@@ -44,7 +48,7 @@ public class SpaceMove : MonoBehaviour
             moveDirection.Normalize();
             GetComponent<Rigidbody2D>().AddForce(moveDirection * move * thrustPower * Speed);
         }        
-        UIfuel = Mathf.RoundToInt(fuel);
+        
         if (!MainMenu.paused && SpaceHealth.alive){
             float rotation = joystick.Horizontal;
             float rotationChange = rotation * rotationSpeed;

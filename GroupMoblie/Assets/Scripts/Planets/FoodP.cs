@@ -18,7 +18,7 @@ public class FoodP : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && SpaceHealth.food <= 49)
+        if (collision.gameObject.tag == "Player" && SpaceHealth.food < PlayerPrefs.GetInt("MaxFood"))
         {
             SpaceHealth.food += 1;
             OnFood = true;

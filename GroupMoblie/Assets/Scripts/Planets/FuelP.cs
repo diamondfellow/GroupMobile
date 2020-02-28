@@ -18,7 +18,7 @@ public class FuelP : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && SpaceMove.fuel <= 998)
+        if(collision.gameObject.tag == "Player" && SpaceMove.fuel < (PlayerPrefs.GetInt("MaxFuel") - 1))
         {
             SpaceMove.fuel += 2;
         }

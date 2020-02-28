@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
     public static bool paused;
+    public Canvas Interface;
+    public Canvas Pause;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,14 +26,14 @@ public class MainMenu : MonoBehaviour
     }
     public void Resume()
     {
-        GetComponent<Canvas>().enabled = false;
+        Pause.enabled = false;
         Time.timeScale = 1;
         paused = false;
     }
-    public void Pause()
+    public void Pausegame()
     {
-        Time.timeScale = 0;
-        GetComponent<Canvas>().enabled = true;
+        Pause.enabled = true;
+        Time.timeScale = 0;        
         paused = true; 
 
     }
@@ -41,24 +43,18 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
         GameObject music = GameObject.FindGameObjectWithTag("music");
         Destroy(music);
+        GameObject music2 = GameObject.FindGameObjectWithTag("music2");
+        Destroy(music2);
     }
     public void MainMenuo()
     {
-        GameObject music = GameObject.FindGameObjectWithTag("music");
-        if(music == null)
-        {
-            SceneManager.LoadScene(0);
-        }
-        else
-        {
-            DontDestroyOnLoad(music);
-            SceneManager.LoadScene(0);
-        }
-              
+        SceneManager.LoadScene(0);
+
     }
     public void Hints()
     {
         GameObject music = GameObject.FindGameObjectWithTag("music");
+        
         if (music == null)
         {
             SceneManager.LoadScene(4);
@@ -66,24 +62,20 @@ public class MainMenu : MonoBehaviour
         else
         {
             DontDestroyOnLoad(music);
+            music.tag = "music2";
             SceneManager.LoadScene(4);
         }
     }
     public void Hints2()
     {
-        GameObject music = GameObject.FindGameObjectWithTag("music");
-        if (music == null)
-        {
-            SceneManager.LoadScene(6);
-        }
-        else
-        {
-            DontDestroyOnLoad(music);
-            SceneManager.LoadScene(6);
-        }
+        SceneManager.LoadScene(6);
     }
     public void Controls()
     {
+        GameObject music = GameObject.FindGameObjectWithTag("music");
+        GameObject music2 = GameObject.FindGameObjectWithTag("music2");
+        Destroy(music);
+        Destroy(music2);
         SceneManager.LoadScene(5);
     }
 }
