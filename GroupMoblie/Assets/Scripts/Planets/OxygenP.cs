@@ -18,6 +18,7 @@ public class OxygenP : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
+        Debug.Log("Hello brain");
         if(collision.gameObject.tag == "Player" && SpaceHealth.oxygen < PlayerPrefs.GetInt("MaxOxygen"))
         SpaceHealth.oxygen += 1;
         OnOxygen = true;

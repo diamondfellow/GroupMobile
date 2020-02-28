@@ -49,6 +49,7 @@ public class SpaceHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(OxygenP.OnOxygen);
         if(VELOtimer > .1)
         {
             Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
@@ -57,12 +58,13 @@ public class SpaceHealth : MonoBehaviour
             velocityY = velocity.y;
             VELOtimer = 0;
         }
-        if(Otimer > 1 && !OxygenP.OnOxygen)
+        if(Otimer > 1)
         {
             oxygen -= 1;
+            Debug.Log("Hello");
             Otimer = 0;
         }
-        if (Ftimer > 5 && !FoodP.OnFood)
+        if (Ftimer > 5)
         {
             food -= 1;
             Ftimer = 0;
