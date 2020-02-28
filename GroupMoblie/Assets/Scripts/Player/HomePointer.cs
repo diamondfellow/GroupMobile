@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HomePointer : MonoBehaviour
 {
+    public Transform HomePlanet;
+    public Transform Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class HomePointer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.up = (HomePlanet.position - Player.position) * 1;
     }
 }
