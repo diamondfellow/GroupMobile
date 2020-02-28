@@ -673,6 +673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb12fcd0d1490b646aa942344f220f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Interface: {fileID: 0}
+  Pause: {fileID: 0}
 --- !u!114 &780308794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -685,6 +687,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb12fcd0d1490b646aa942344f220f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Interface: {fileID: 0}
+  Pause: {fileID: 0}
 --- !u!114 &780308795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,7 +1359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600437465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.32, y: 7.76, z: 0}
+  m_LocalPosition: {x: -3.18, y: 8.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1395,9 +1399,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.022992969, y: 0}
+  m_Offset: {x: -0.04244542, y: 0}
   serializedVersion: 2
-  m_Radius: 1.4198147
+  m_Radius: 0.46663904
 --- !u!1 &1666664688
 GameObject:
   m_ObjectHideFlags: 0
