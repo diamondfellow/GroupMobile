@@ -94,7 +94,7 @@ public class CustomPlay : MonoBehaviour
         GravityStrength.value = 1.50f;
         ThrustPower.value = 3;
         RotationSpeed.value = 3;
-        HomePlanetMetalRequirent.value = 1000;
+        HomePlanetMetalRequirent.value = 500;
         MaxHealth.value = 100;
         SettingsChange();
         SceneManager.LoadScene(0);

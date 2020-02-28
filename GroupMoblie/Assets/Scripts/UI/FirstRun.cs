@@ -18,7 +18,7 @@ public class FirstRun : MonoBehaviour
             PlayerPrefs.SetFloat("GravityStrength", 1.5f);
             PlayerPrefs.SetFloat("ThrustPower", 3);
             PlayerPrefs.SetFloat("RotationSpeed", 3);
-            PlayerPrefs.SetInt("MetalRequirement", 1000);
+            PlayerPrefs.SetInt("MetalRequirement", 500);
             PlayerPrefs.SetInt("MaxHealth", 100);
         }
     }
